@@ -4,7 +4,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@radix-ui/react-tooltip";
-import Link from "next/link";
 import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { LuHouse } from "react-icons/lu";
@@ -16,60 +15,61 @@ function Navbar() {
     <header className="w-fit min-w-[300px] bg-white-005 p-4 rounded-xl">
       <ul className="flex items-center justify-around min-w-full gap-2 text-2xl">
         <li>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger className="">
-                <Link className="flex items-center m-0" href="#home">
-                  <LuHouse />
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent className="px-4 py-1 text-sm rounded-full bg-white-005">
-                Home
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+          <a href="#home">
+            {" "}
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <LuHouse href="#home" />
+                </TooltipTrigger>
+                <TooltipContent className="px-4 py-1 text-sm rounded-full bg-white-005">
+                  Home
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </a>
         </li>
         <li>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger className="">
-                <Link className="flex items-center m-0" href="#projects">
+          <a href="#projects">
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger className="">
                   <MdOutlineWorkOutline />
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent className="px-4 py-1 text-sm rounded-full bg-white-005">
-                Projects
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+                </TooltipTrigger>
+                <TooltipContent className="px-4 py-1 text-sm rounded-full bg-white-005">
+                  Integrantes
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </a>
         </li>
         <li>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger>
-                <Link className="flex items-center m-0" href="#blog">
+          <a href="#blog">
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
                   <TbEdit />
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent className="px-4 py-1 text-sm rounded-full bg-white-005">
-                Blog
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+                </TooltipTrigger>
+                <TooltipContent className="px-4 py-1 text-sm rounded-full bg-white-005">
+                  Blog
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </a>
         </li>
         <li>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger>
-                <Link className="flex items-center m-0" href="#contact">
+          <a href="#contact">
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
                   <FiPhone />
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent className="px-4 py-1 text-sm rounded-full bg-white-005">
-                Contact Me
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+                </TooltipTrigger>
+                <TooltipContent className="px-4 py-1 text-sm rounded-full bg-white-005">
+                  Contact Me
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </a>
         </li>
       </ul>
     </header>
